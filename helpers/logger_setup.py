@@ -1,13 +1,7 @@
-import os
 import logging
 from colorlog import ColoredFormatter
 
 log_file_path = "app.log"
-if os.path.exists(log_file_path):
-    os.remove(log_file_path)
-with open(log_file_path, "w"):
-    pass
-
 
 def setup_logger(file_mode="a"):
     # Set up logging
@@ -19,11 +13,6 @@ def setup_logger(file_mode="a"):
     if not logger.handlers:
         # Create a file handler with the specified mode
         file_handler = logging.FileHandler("app.log", mode=file_mode)
-
-        # Clear the log file if needed
-        if file_mode == "w":
-            with open("app.log", "w"):
-                pass
 
         # Create a colored formatter for the console
         console_formatter = ColoredFormatter(
