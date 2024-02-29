@@ -1,0 +1,7 @@
+/auth.json
+/token.json
+/.env
+**/__pycache__/
+/venv
+/app.log
+/client_secret.json
