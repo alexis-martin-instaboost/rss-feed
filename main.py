@@ -101,4 +101,4 @@ client_secret_json = {
 if __name__ == "__main__":
     from waitress import serve
     create_json_file(client_secret_json, 'client_secret.json')
-    serve(app, host="0.0.0.0", port=5000)
+    serve(app, host="0.0.0.0", port=3000)
